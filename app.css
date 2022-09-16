@@ -1,0 +1,10 @@
+.list-items {
+    display: flex;
+}
+.delete-Btn {
+    background-color: #d90429;
+    color: aliceblue;
+}
+body {
+    background-color: turquoise;
+}
