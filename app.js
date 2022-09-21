@@ -12,11 +12,20 @@ app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
+const AddNewTask = async (task) => {
+  ob.Users.Tasks.push(task);
+  var ob2 = JSON.stringify(ob);
+  fs.writeFile("data.json", ob2, (err) => {
+    if (err) 
+      throw err;
+    console.log(ob);
+  });
+}
+
 app.get("/home", (req, res) => {
   res.render("home.ejs");
 });
 app.post("/home", (req, res) => {
-  console.log("POST request");
   res.redirect("index");
 });
 
@@ -24,20 +33,14 @@ app.get("/index", (req, res) => {
   const tasks = ob.Users.Tasks;
   console.log(tasks);
   res.render("index.ejs", { tasks });
-  //res.send("Index Page");
 });
 
 app.get("/new", (req, res) => {
   res.render("addTask.ejs");
 });
-app.post("/new", (req, res) => {
+app.post("/new", async (req, res) => {
   const { task } = req.body;
-  ob.Users.Tasks.push(task);
-  var ob2 = JSON.stringify(ob);
-  fs.writeFile("data.json", ob2, (err) => {
-    if (err) throw err;
-    console.log(ob);
-  });
+  await AddNewTask(task);
   res.redirect("index");
 });
 

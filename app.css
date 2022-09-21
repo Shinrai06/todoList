@@ -5,6 +5,11 @@
     background-color: #d90429;
     color: aliceblue;
 }
+.nav-btn {
+    color: #000;
+    background-color: #ed9034;
+    text-underline-offset: none;
+}
 body {
     background-color: turquoise;
 }
