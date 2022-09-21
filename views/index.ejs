@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="app.css">
-</head>
-<body>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
     <h1>TO-DO list</h1>
     <h3>List of Tasks</h3>
     <ol>
-        <% for(let task of tasks) {%>
-            <div class="list-items">
-                <li><%= task %></li>
-                <button class="delete-Btn">&#x1f5d1;</button>
-            </div>
-        <% } %>
+      <% for(let task of tasks) {%>
+      <div class="list-items">
+        <li><%= task %></li>
+        <button class="delete-Btn">&#x1f5d1;</button>
+      </div>
+      <% } %>
     </ol>
     <a href="/new">Add New Task</a>
-</body>
+  </body>
 </html>
