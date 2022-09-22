@@ -23,13 +23,13 @@ const AddNewTask = async (task) => {
   });
 }
 const validate = (x) => {
-  console.log(x.userName,x.email,x.password);
-  console.log(users.UserName,users.Email,users.Password);
   if((x.userName === users.UserName) && (x.email === users.Email) && (x.password == users.Password)){
     return true;
   }
   return false;
 }
+
+
 app.get("/home", (req, res) => {
   res.render("home.ejs");
 });
