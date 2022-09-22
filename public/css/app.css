@@ -1,15 +1,22 @@
 .list-items {
     display: flex;
+    margin: 2em;
 }
 .delete-Btn {
     background-color: #d90429;
     color: aliceblue;
+    margin-left: 1em;
 }
 .nav-btn {
     color: #000;
     background-color: #ed9034;
     text-underline-offset: none;
+    border-radius: 10px;
 }
 body {
     background-color: turquoise;
+}
+a {
+    color: #000;
+    text-decoration: none;
 }
