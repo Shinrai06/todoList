@@ -1,1 +1,14 @@
-{"Users":{"UserName":"Shiva","Email":"shiva@gmail.com","PassWord":"12345678","Tasks":["Write an essay for my brother","Deadline to submit the assignement","Pick up the grocieries on the eay to home","purchase chicken","Complete the todoList project"]}}
+{
+  "Users": {
+    "UserName": "Shiva",
+    "Email": "shiva@gmail.com",
+    "Password": 12345678,
+    "Tasks": [
+      "Write an essay for my brother",
+      "Deadline to submit the assignement",
+      "Pick up the grocieries on the eay to home",
+      "Purchase chicken",
+      "Complete the todoList project"
+    ]
+  }
+}
