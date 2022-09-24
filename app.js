@@ -30,7 +30,6 @@ const validate = (x) => {
   return false;
 }
 
-
 app.get("/home", (req, res) => {
   res.render("home.ejs");
 });
@@ -44,7 +43,7 @@ app.post("/home", (req, res) => {
 
 app.get("/index", (req, res) => {
   const tasks = users.Tasks;
-  console.log(typeof(tasks));
+  console.log(typeof(tasks[0]));
   res.render("index.ejs", { tasks });
 });
 
@@ -58,5 +57,5 @@ app.post("/new", async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("localHost: 3000");
+  console.log("URL : http://localhost:3000/home");
 });

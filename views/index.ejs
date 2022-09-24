@@ -10,12 +10,12 @@
   <body>
     <h1>TO-DO list</h1>
     <h3>List of Tasks</h3>
-    <ol>
+    <ol  class="abc">
       <% for(let task of tasks) {%>
-      <div class="list-items">
-        <li><%= task %></li>
-        <button class="delete-Btn">&#x1f5d1;</button>
-      </div>
+        <li class=" list-items">
+          <button class="delete-Btn">&#x1f5d1;</button>
+          <%= task %>
+        </li>
       <% } %>
     </ol>
     <button class="nav-btn">
