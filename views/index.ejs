@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
     <h1>TO-DO list</h1>
     <h3>List of Tasks</h3>
-    <ol  class="abc">
+    <ol class="abc">
       <% for(let task of tasks) {%>
-        <li class=" list-items">
-          <button class="delete-Btn">&#x1f5d1;</button>
-          <%= task %>
+      <% if(task!=null) { %> 
+        <li class="list-items">
+          <a href="<%='/index/'+task%>" class="delete-Btn">&#x1f5d1;</a>
+          <section class="task"><%= task %></section>
         </li>
-      <% } %>
+      <% } } %>
     </ol>
     <button class="nav-btn">
       <a href="/new">Add New Task</a>
     </button>
-    <button  class="nav-btn">
+    <button class="nav-btn">
       <a href="/home">Home</a>
     </button>
   </body>

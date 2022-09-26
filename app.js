@@ -29,6 +29,21 @@ const validate = (x) => {
   }
   return false;
 }
+const DeleteTask = async (task) => {
+  for (i in users.Tasks) {
+    if (task === users.Tasks[i]) {
+      x = i;
+      break;
+    }
+  }
+  delete users.Tasks[x];
+  var ob2 = JSON.stringify(ob);
+  fs.writeFile("data.json", ob2, (err) => {
+    if (err) 
+      throw err;
+    console.log(ob);
+  });
+};
 
 app.get("/home", (req, res) => {
   res.render("home.ejs");
@@ -43,13 +58,19 @@ app.post("/home", (req, res) => {
 
 app.get("/index", (req, res) => {
   const tasks = users.Tasks;
-  console.log(typeof(tasks[0]));
-  res.render("index.ejs", { tasks });
+  res.render("index", { tasks });
 });
+app.get("/index/:id", async (req,res) => {
+  const {id} = req.params;
+  await DeleteTask(id);
+  res.redirect("/index");
+})
+
 
 app.get("/new", (req, res) => {
   res.render("addTask.ejs");
 });
+
 app.post("/new", async (req, res) => {
   const { task } = req.body;
   await AddNewTask(task);

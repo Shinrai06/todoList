@@ -1,15 +1,20 @@
 .list-items {
     display: flex;
-    margin: 3px;
+    margin: 3px 0 7px 3px;
 }
 button {
     border: none;
     border-radius: 5px;
 }
 .delete-Btn {
+    display: flex;
     background-color: #d90429;
     color: aliceblue;
     margin-right: 2px;
+    text-decoration: none;
+    min-width: 20px;
+    justify-content: center;
+    border-radius: 5px;
 }
 .delete-Btn:hover {
     background-color: #ff90a1;
@@ -27,15 +32,21 @@ button {
     padding-inline-start: 2px;
 }
 .add-btn {
-    background-color: rgb(26, 232, 74);
+    background-color: rgb(26, 232, 222);
+}
+.task {
+    margin-left: 10px;
 }
 body {
-    background-color: turquoise;
+    background-color: rgb(153, 90, 247);
 }
 a {
     color: #000;
     text-decoration: none;
 }
 form > div {
-    margin: 3px 0;
+    margin: 5px 0;
+    display: flex;
+    max-width: 300px;
+    justify-content: space-between;
 }
